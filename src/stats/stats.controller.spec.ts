@@ -1,4 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { Web3Module } from '../web3/web3.module';
 import { StatsController } from './stats.controller';
 import { StatsService } from './stats.service';
 
@@ -7,6 +8,7 @@ describe('StatsController', () => {
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
+      imports: [Web3Module],
       controllers: [StatsController],
       providers: [StatsService],
     }).compile();

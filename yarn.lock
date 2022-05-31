@@ -6434,6 +6434,13 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
+web3-batch-request@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/web3-batch-request/-/web3-batch-request-1.0.1.tgz#2a586e61e7ff1bae1122245ef292587c0b58f240"
+  integrity sha512-2NL5J5qB9ct/ouq985jM2F2t08VzMV4NmTQwXmr3WehAnI6weElhAREvclvOFgOb6S/fkN4Xsp7haMBVBI7unQ==
+  dependencies:
+    web3 "^1.3.0"
+
 web3-bzz@1.7.3:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/web3-bzz/-/web3-bzz-1.7.3.tgz#6860a584f748838af5e3932b6798e024ab8ae951"
@@ -6649,7 +6656,7 @@ web3-utils@1.7.3:
     randombytes "^2.1.0"
     utf8 "3.0.0"
 
-web3@^1.7.3:
+web3@^1.3.0, web3@^1.7.3:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/web3/-/web3-1.7.3.tgz#30fe786338b2cc775881cb28c056ee5da4be65b8"
   integrity sha512-UgBvQnKIXncGYzsiGacaiHtm0xzQ/JtGqcSO/ddzQHYxnNuwI72j1Pb4gskztLYihizV9qPNQYHMSCiBlStI9A==
