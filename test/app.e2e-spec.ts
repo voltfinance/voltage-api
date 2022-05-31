@@ -3,7 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
 import { AppModule } from './../src/app.module';
 
-describe('AppController (e2e)', () => {
+describe('AppModule (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
@@ -15,10 +15,20 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/stats/circulatingVolt (GET)', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get('/stats/circulatingVolt')
       .expect(200)
-      .expect('Hello World!');
+      .expect(({ body }) => {
+        return Number(body) > 0;
+      });
+  });
+  it('/stats/totalSupplyVolt (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/stats/totalSupplyVolt')
+      .expect(200)
+      .expect(({ body }) => {
+        return Number(body) > 0;
+      });
   });
 });
