@@ -10,6 +10,7 @@ RUN yarn install --frozen-lockfile
 
 COPY --chown=node:node . .
 RUN yarn build
+RUN yarn install --production --frozen-lockfile
 
 # ---
 
