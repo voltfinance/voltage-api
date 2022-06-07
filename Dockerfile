@@ -6,11 +6,10 @@ USER node
 WORKDIR /home/node
 
 COPY package.json yarn.lock ./
-RUN yarn
+RUN yarn install --frozen-lockfile
 
 COPY --chown=node:node . .
-RUN yarn build \
-    && yarn install --production --frozen-lockfile
+RUN yarn build
 
 # ---
 
